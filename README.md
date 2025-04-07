@@ -2,7 +2,7 @@
 
 # 🍽️ API Restaurants – Projet Fullstack avec Next.js
 
-<img src="https://github.com/Mika73100/api/blob/main/public/300shots_so.png" alt="preview" width="600"/>
+<img src="300shots_so.png" alt="preview" width="600"/>
 
 </div>
 
