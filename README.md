@@ -29,9 +29,9 @@ Ce projet met en œuvre :
 
 ## 🖼️ Screenshots
 
-<img src="https://github.com/Mika73100/api/blob/main/public/bdd.png" width="600"/>
-<img src="https://github.com/Mika73100/api/blob/main/public/638shots_so.png" width="600"/>
-<img src="https://github.com/Mika73100/api/blob/main/public/get.png" width="600"/>
+<img src="public/bdd.png" width="600"/>
+<img src="public/638shots_so.png" width="600"/>
+<img src="public/get.png" width="600"/>
 
 ---
 
