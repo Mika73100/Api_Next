@@ -1,14 +1,11 @@
-import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-
+import { prisma } from "@/lib/prisma";
 
 
 ////////////////////CREATION DES ROUTES RESTAURANT////////////////////
 
 
-
-const prisma = new PrismaClient()
 
 
 

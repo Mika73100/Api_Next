@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 
 ////////////////////CREATION DES ROUTES MENU////////////////////
 
-export const prisma = new PrismaClient();
+
 
 ////////////// GET //////////////
 

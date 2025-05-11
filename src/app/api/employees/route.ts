@@ -1,38 +1,23 @@
-import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-
-
+import { prisma } from "@/lib/prisma";
 
 ////////////////////CREATION DES ROUTES EMPLOYEES////////////////////
-
-
-
-export const prisma = new PrismaClient()
-
-
 
 ////////////// GET //////////////
 
 export async function GET(request: Request) {
-
   try {
     const employees = await prisma.employee.findMany();
-
     return NextResponse.json(employees, { status: 200 });
-
   } catch (error) {
-
     return NextResponse.json({ error: 'failed to fetch employees' }, { status: 500 });
   }
 }
 
-
-
 ////////////// POST //////////////
 
 export async function POST(request: Request) {
-
   try {
     const { firstName, lastName, email, role, password, restaurantId } = await request.json()
 
@@ -60,9 +45,7 @@ export async function POST(request: Request) {
   }
 }
 
-
 ////////////// UPDATE //////////////
-
 
 export async function PATCH(request: Request) {
   try {
@@ -83,15 +66,12 @@ export async function PATCH(request: Request) {
     });
 
     return NextResponse.json(updatedEmployee, { status: 200 });
-
   } catch (error) {
     return NextResponse.json({ error: "Failed to update employee" }, { status: 500 });
   }
 }
 
-
 ////////////// DELETE //////////////
-
 
 export async function DELETE(request: Request) {
   try {
@@ -106,9 +86,7 @@ export async function DELETE(request: Request) {
     });
 
     return NextResponse.json(deleteEmployee, { status: 200 });
-
   } catch (error) {
-
     return NextResponse.json({ error: 'Failed to delete employee' }, { status: 500 });
   }
 }

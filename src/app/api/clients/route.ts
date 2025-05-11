@@ -1,16 +1,8 @@
-import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-
-
+import { prisma } from "@/lib/prisma";
 
 ////////////////////CREATION DES ROUTES CLIENTS////////////////////
-
-
-
-export const prisma = new PrismaClient()
-
-
 
 ////////////// GET //////////////
 
@@ -27,10 +19,7 @@ export async function GET(request: Request) {
   }
 }
 
-
-
 ////////////// POST //////////////
-
 
 export async function POST(request: Request) {
   try {
@@ -65,7 +54,6 @@ export async function POST(request: Request) {
 
 ////////////// UPDATE //////////////
 
-
 export async function PATCH(request: Request) {
   try {
     const { id, password, ...data } = await request.json();
@@ -91,9 +79,7 @@ export async function PATCH(request: Request) {
   }
 }
 
-
 ////////////// DELETE //////////////
-
 
 export async function DELETE(request: Request) {
   try {
