@@ -1,6 +1,6 @@
 import Image from "next/image";
 import AuthButton from "@/app/components/AuthButton";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "../lib/prisma";
 
 export default async function Home() {
 
