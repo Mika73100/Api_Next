@@ -1,6 +1,6 @@
 import Image from "next/image";
-import AuthButton from "@/app/components/AuthButton";
 import { PrismaClient } from "@prisma/client";
+import Navbar from "@/app/components/Navbar";
 
 const prisma = new PrismaClient();
 
@@ -10,6 +10,7 @@ export default async function Home() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <Navbar />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -30,9 +31,6 @@ export default async function Home() {
           <li>Save and see your changes instantly.</li>
         </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <AuthButton />
-        </div>
 
         <div className="mt-6">
           <h2 className="text-2xl font-bold">Restaurants</h2>
